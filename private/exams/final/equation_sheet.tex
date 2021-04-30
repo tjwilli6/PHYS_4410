@@ -1,0 +1,63 @@
+%================
+% Custom commands
+%================
+\thispagestyle{empty}
+\newcommand{\degrees}{$^\circ$}
+\setlength{\parindent}{12pt}
+
+\begin{center}
+\fontsize{20}{20}{\selectfont{\textbf{Potentially useful information}}}\\
+\end{center}
+\begin{multicols}{2}
+\begin{minipage}{\columnwidth}
+\centering\underline{Unit analysis}\\
+\begin{tabular}{c c c}
+Power & Prefix & Name\\
+$10^{12}$ & T & tera\\
+$10^9$ & G & giga\\
+$10^6$ & M & mega\\
+$10^3$ & k & kilo\\
+$10^0$ & --- & ---\\
+$10^{-3}$ & m & milli\\
+$10^{-6}$ & $\mu$ & micro\\
+$10^{-9}$ & n & nano
+\end{tabular}
+\end{minipage}
+
+
+\vspace{8cm}
+\begin{minipage}{\columnwidth}
+\begin{center}\underline{Constants}\end{center}
+\begin{tabular}{lll}
+	Name&Symbol&Value\\ \hline
+	Boltzmann Constant & $k_B$ & $1.381\times10^{-23}$ J/K\\
+	Red. Planck Constant & $\hbar$ & $1.055\times10^{-34}$ J$\cdot$s\\
+	Electron mass & $m_e$ & $9.11\times10^{-31}$ kg\\
+	Electron charge & $e$ & $1.6\times 10^{-19}$ C\\
+	Avogadro's Number &$N_A$& $6.022\times10^{23}$\\
+	Newton's Constant &$G$ & $6.673\times10^{-11}\mathrm{N}\cdot\mathrm{m}^2/\mathrm{kg}^2$\\
+\end{tabular}
+\end{minipage}
+
+
+\begin{minipage}{\columnwidth}
+	
+\centering\underline{Useful equations}
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{ll}
+	\multicolumn{2}{c}{\textbf{Mono-atomic Ideal Gas}}\\
+	Multiplicity & $\Omega=\frac{1}{\hbar^{3N}}\frac{V^N\pi^{\frac{3N}{2}}\left(2mU\right)^\frac{3N}{2}}{N!\cdot\Gamma(\frac{3N}{2})}$\\
+	Entropy & $S=Nk_b\left[\ln\left(\frac{V}{N}\left(\frac{4\pi mU}{3N\hbar^2}\right)^{3/2}\right)+\frac{5}{2}\right]$\\
+	\multicolumn{2}{c}{\textbf{Einstein Solids}}\\
+	Multiplicity & $\Omega=\frac{\left(q+N-1\right)!}{q!\left(N-1\right)!}$\\
+	\multicolumn{2}{c}{\textbf{Hyperbolic Trig Functions}}\\
+	$\cosh{x}$ & $\frac{e^x+e^{-x}}{2}$\\
+	$\sinh{x}$ & $\frac{e^x-e^{-x}}{2}$\\
+	\multicolumn{2}{c}{\textbf{Unit Conversions}}\\
+	1 atm & $=1.013\times10^5$ N/m$^2$\\
+	T [$^\circ$ C] & =T[K] - 273.15\\
+	1 cal&=4.186 J\\
+\end{tabular}
+\end{minipage}
+
+\end{multicols}

@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage[margin=1.5cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\pagestyle{fancy}
+
+\begin{document}
+\fancyhead[L]{ \includegraphics[width=2cm]{au_logo.png} }
+\fancyhead[R]{PHYS 4410: Statistical Mechanics}
+\fancyfoot[C]{\thepage}
+\vspace*{0cm}
+\begin{center}
+	{\LARGE \textbf{Exam II Study Guide}}\\
+	\vspace{0.25cm}
+	%{\Large Due: Friday, September 4}
+\end{center}
+\section*{Chapter 3}
+The fundamental concept of chapter 3 really is the thermodynamic identity:
+
+\begin{equation}
+	\label{ident}
+	dU = TdS - PdV +\mu dN
+\end{equation}
+which we can combine with the definition of the total derivative of $U(S,V,N)$:
+\begin{equation}
+	dU = \left(\frac{\partial U}{\partial S}\right)_{V,N}dS+\left(\frac{\partial U}{\partial V}\right)_{S,N}dV+\left(\frac{\partial U}{\partial N}\right)_{S,V}dN
+\end{equation}
+To derive:
+\begin{align}
+	T&= \left(\frac{\partial U}{\partial S}\right)_{V,N}\\
+	-P&=\left(\frac{\partial U}{\partial V}\right)_{S,N}\\
+	\mu&=\left(\frac{\partial U}{\partial N}\right)_{S,V}
+\end{align}
+Equation \ref{ident} is the same as:
+\begin{equation}
+	dS = \frac{1}{T}dU+\frac{P}{T}dV-\frac{\mu}{T}dN
+\end{equation}
+from which we derive:
+\begin{align}
+	\frac{1}{T}&=\left(\frac{\partial S}{\partial U}\right)_{V,N}\\ \label{temp}
+	\frac{-P}{T}&=\left(\frac{\partial S}{\partial V}\right)_{U,N}\\
+	\mu&=\left(\frac{\partial S}{\partial N}\right)_{U,V}\\
+\end{align}
+\textbf{You should be able to start at equation \ref{ident} and derive 2-10!}
+
+The basic idea of chapter 3 is this:
+\begin{enumerate}
+	\item Start with (or derive) a system's multiplicity $\Omega(U,V,N)$
+	\item Take the logarithm of $\Omega$ to find the entropy $S$
+	\item Once you have $S$, you can take derivatives to find any macroscopic quantity you want. For example, in class (and in the book) we used equation \ref{temp} (which you should know as the \textit{definition} of temperature) to obtain $U$ as a function of $T$ for the Einstein solid and the ideal gas. Once you know $U(T,V,N)$, you can also find the heat capacity by differentiating with respect to temperature.
+\end{enumerate}
+We used the above formula to find $U(T)$ and $C_V$ for the ideal gas, the Einstein solid, and the paramagnet. The results themselves are not as important as knowing how to obtain them. (If I give you a function for $\Omega$, you should be able to find relations between energy, temperature, pressure, etc using eqns 1-10 above.)
+
+You should also know that (for quasistatic processes\footnote{Know what this means!}) $dS=\frac{Q}{T}=\int \frac{C_V}{T}dT$, and be able to use this to calculate $\Delta S$ given a know $\Delta T$ or $Q$.
+\section*{Chapter 4}
+\begin{itemize}
+	\item You should be familiar with the basic operating principle of a heat engine (create a temperature difference causing heat to flow from hot to cold, capture some of the heat and use it to do work). 
+	\item You should be able to qualitatively describe why the efficiency of a heat engine is fundamentally limited (you should be able to show that if you \textit{could} convert all of the heat leaving the hot reservoir into work, this would violate the second law).
+	\item You should be able to use the basic results derived in class and in the book to calculate unknown quantities, like in the homework problems (if the engine operates at these temperatures, how much waste heat must be expelled to obtain some given amount of work?, etc...)
+\end{itemize}
+
+\section*{Chapter 5}
+Be very familiar with the Helmholtz energy $F$, the Gibbs energy $G$, and their corresponding thermodynamic identities:
+\begin{align}
+	F&=U-TS\\
+	dF&=-SdT-PdV+\mu dN\\
+	G&=U-TS+PV\\
+	dG&=-SdT+VdP+\mu dN
+\end{align}
+You should be able to derive $dF$ from the definition of $F$ and $dG$ from $G$.
+
+With equations 11-14, we can then say (make sure you know how to derive these!):
+\begin{align*}
+	-S&=\left(\frac{\partial F}{\partial T}\right)_{V,N}\\
+	-P&=\left(\frac{\partial F}{\partial V}\right)_{T,N}\\
+	...
+\end{align*}
+Know the importance of $F$ and $G$: in a non isolated system, $S$ of the system does not necessarily need to always increase. Instead, $F$ or $G$ need to \textit{decrease}. 
+\begin{itemize}
+	\item If the system is isolated from the environment (constant energy, volume, $N$): $S$ tends to increase
+	\item If the system exchanges energy with the environment at constant $T$ and $V$, then $F$ tends to decrease
+	\item If the system exchanges energy and volume with the environment at constant $T$ and $P$, then $G$ tends to decrease
+\end{itemize}
+At constant $T$ and $V$, $\Delta F=\Delta U - T\Delta S$: $F$ balances the systems inclination to minimize its energy with the second law.\\
+
+\subsection*{Phase Transitions}
+At constant $T$ and $P$, $\Delta G = \Delta H - T\Delta S$. $\Delta G$ determines whether or not a substance will transition to a different phase. For example: if $Q_{\ell\rightarrow g}$ is the heat required to vaporize a liquid at constant pressure, and $\Delta S_{\ell\rightarrow g}$ is the change in entropy from a liquid to a gaseous state (which will be positive): then the liquid will vaporize if 
+\begin{equation*}
+	\Delta G = \Delta H - T\Delta S=Q_{\ell\rightarrow g}-T\Delta S_{\ell\rightarrow g}<0
+\end{equation*}
+In other words: vaporization is a \textit{disfavored} process because it costs energy ($Q_{\ell\rightarrow g}$). On the other hand, it is \textit{favored} because it increases entropy. If the increase in entropy exceeds the cost in energy, the process will proceed:
+\begin{equation*}
+	Q_{\ell\rightarrow g}<T\Delta S_{\ell\rightarrow g}
+\end{equation*}
+If $\Delta G=0$, then the two phases are in equilibrium. This can only occur for certain combinations of and $T$ and $P_{vapor}$. The set of ($T$,$P_{vapor}$) points for which two phases are in equilibrium are solutions to the \textbf{Clausius-Clapeyron} Relation:
+\begin{equation}
+	\frac{dP}{dT}=\frac{mL}{T\Delta V}
+\end{equation}
+Where $L$ is the latent heat (per mass) required for the phase transition, $m$ is the mass of the substance, and $\Delta V=V_f-V_i$ is the change in volume as a result of the phase transition. You should be able to use this relation as in problems 32, 35, etc in the book.
+
+You should also know the definition of vapor pressure, be able to explain the difference between evaporation and boiling, and estimate the boiling temperature at different altitudes.
+\end{document}

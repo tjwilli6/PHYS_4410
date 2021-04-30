@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[margin=1.5cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[section]{placeins}
+\usepackage{amsmath}
+\pagestyle{fancy}
+
+\begin{document}
+\fancyhead[L]{ \includegraphics[width=2cm]{au_logo.png} }
+\fancyhead[R]{PHYS 4410: Statistical Mechanics}
+\fancyfoot[C]{\thepage}
+\vspace*{0cm}
+\begin{center}
+	{\LARGE \textbf{Quiz 3}}\\
+	\vspace{.25cm}
+	%{\Large Chapter 1}
+	%\vspace{0.25cm}
+	%{\Large Due: Friday, September 4}
+\end{center}
+Consider an collection of $N$ many indistinguishable one dimensional quantum harmonic oscillators. Each individual particle has an energy $E_n=(n+\frac{1}{2})\hbar\omega$, $n=1,2,3,\ldots$\\
+You may find the following expression to be of use:
+\begin{equation*}
+	\sum_{n=0}^{N}r^n=\frac{1-r^{N+1}}{1-r}
+\end{equation*}
+
+\begin{enumerate}
+	\item What is the partition function of this system?
+	\item What is the average energy $U$?
+	\item What is the heat capacity $C_V$?
+\end{enumerate}
+\end{document}

@@ -1,0 +1,591 @@
+\documentclass{beamer}
+\usetheme{default}
+\hypersetup{colorlinks=true,urlcolor=blue,urlbordercolor=blue}
+\title{The Quantum Distribution Functions}
+%\author{TeXstudio Team}
+\begin{document}
+\begin{frame}[plain]
+    \maketitle
+\end{frame}
+\begin{frame}{Expected number of particles in state $s$}
+	\begin{align*}
+		\left<n_s\right>&=\sum_{R}n_sP(n_s)\\
+		\left<n_s\right>&=\frac{\sum_{R}n_se^{-\beta E_R}}{\sum_{R}e^{-\beta E_R}}
+	\end{align*}
+\end{frame}
+
+
+
+\begin{frame}{Example: Harmonic Oscillator}
+	3 particles distributed among 4 states
+	\renewcommand{\arraystretch}{1.5}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		R/s&n=0&n=1&n=2&n=3&$E_R$\\
+		\hline
+		1&3&0&0&0&$\frac{3}{2}\hbar\omega$\\
+		\hline
+		2&0&3&0&0&$\frac{9}{2}\hbar\omega$\\
+		\hline
+		3&0&0&3&0&$\frac{15}{2}\hbar\omega$\\
+		\hline
+		4&0&0&0&3&$\frac{21}{2}\hbar\omega$\\
+		\hline
+		5&2&1&0&0&$\frac{5}{2}\hbar\omega$\\
+		\hline
+		6&2&0&1&0&$\frac{7}{2}\hbar\omega$\\
+		\hline
+		7&2&0&0&1&$\frac{9}{2}\hbar\omega$\\
+		\hline
+		8&0&2&1&0&$\frac{11}{2}\hbar\omega$\\
+		\hline
+		9&0&2&0&1&$\frac{13}{2}\hbar\omega$\\
+		\hline
+		10&1&2&0&0&$\frac{7}{2}\hbar\omega$\\
+		\hline
+	\end{tabular}
+\end{frame}
+
+
+
+\begin{frame}{Example: Harmonic Oscillator}
+	(continued...)\\
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		R/s&n=0&n=1&n=2&n=3&$E_R$\\
+		\hline
+		11&0&0&2&1&$\frac{17}{2}\hbar\omega$\\
+		\hline
+		12&1&0&2&0&$\frac{11}{2}\hbar\omega$\\
+		\hline
+		13&0&1&2&0&$\frac{13}{2}\hbar\omega$\\
+		\hline
+		14&1&0&0&2&$\frac{15}{2}\hbar\omega$\\
+		\hline
+		15&0&1&0&2&$\frac{17}{2}\hbar\omega$\\
+		\hline
+		16&0&0&1&2&$\frac{19}{2}\hbar\omega$\\
+		\hline
+		17&1&1&1&0&$\frac{9}{2}\hbar\omega$\\
+		\hline
+		18&0&1&1&1&$\frac{15}{2}\hbar\omega$\\
+		\hline
+		19&1&0&1&1&$\frac{13}{2}\hbar\omega$\\
+		\hline
+		20&1&1&0&1&$\frac{11}{2}\hbar\omega$\\
+		\hline
+	\end{tabular}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Example: Harmonic Oscillator}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\tabcolsep}{1pt}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		R/s&n=0&n=1&n=2&n=3&$E_R$\\
+		\hline
+		1&3&0&0&0&$\frac{3}{2}\hbar\omega$\\
+		\hline
+		2&0&3&0&0&$\frac{9}{2}\hbar\omega$\\
+		\hline
+		3&0&0&3&0&$\frac{15}{2}\hbar\omega$\\
+		\hline
+		4&0&0&0&3&$\frac{21}{2}\hbar\omega$\\
+		\hline
+		5&2&1&0&0&$\frac{5}{2}\hbar\omega$\\
+		\hline
+		6&2&0&1&0&$\frac{7}{2}\hbar\omega$\\
+		\hline
+		7&2&0&0&1&$\frac{9}{2}\hbar\omega$\\
+		\hline
+		8&0&2&1&0&$\frac{11}{2}\hbar\omega$\\
+		\hline
+		9&0&2&0&1&$\frac{13}{2}\hbar\omega$\\
+		\hline
+		10&1&2&0&0&$\frac{7}{2}\hbar\omega$\\
+		\hline
+	\end{tabular}
+		\end{column}
+	\begin{column}{0.5\textwidth}
+	\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{1pt}
+\begin{tabular}{c}
+$\sum_{R}n_2e^{-\beta E_R}=$\\
+$0\cdot e^{-\frac{3}{2}\beta \hbar \omega}+$\\
+$0\cdot e^{-\frac{9}{2}\beta \hbar \omega}+$\\
+$3\cdot e^{-\frac{15}{2}\beta \hbar \omega}+$\\
+$0\cdot e^{-\frac{21}{2}\beta \hbar \omega}+$\\
+$0\cdot e^{-\frac{5}{2}\beta \hbar \omega}+$\\
+$1\cdot e^{-\frac{7}{2}\beta \hbar \omega}+$\\
+$0\cdot e^{-\frac{9}{2}\beta \hbar \omega}+$\\
+$1\cdot e^{-\frac{11}{2}\beta \hbar \omega}+$\\
+$0\cdot e^{-\frac{13}{2}\beta \hbar \omega}+$\\
+$0\cdot e^{-\frac{7}{2}\beta \hbar \omega}+\cdots$
+\end{tabular}
+	\end{column}
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}{Expected number of particles in state $s$}
+	\begin{align*}
+		\left<n_s\right>&=\frac{\sum_{R}n_se^{-\beta E_R}}{\sum_{R}e^{-\beta E_R}}=\frac{\sum_{R}n_se^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_s\epsilon_s+\cdots\right)}}{\sum_{R}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_s\epsilon_s+\cdots\right)}}\\ \\
+		&=\frac{\sum_{R}n_se^{\beta n_s\epsilon_s}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}}{\sum_{R}e^{-\beta n_s\epsilon_s}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}}
+	\end{align*}
+Here we factor terms depending on state $s$ from the sum
+\end{frame}
+
+
+
+
+
+\begin{frame}{Expected number of particles in state $s$}
+	\begin{align*}
+		\left<n_s\right>&=\frac{\sum_{R}n_se^{\beta n_s\epsilon_s}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}}{\sum_{R}e^{-\beta n_s\epsilon_s}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}}\\ \\
+		&=\frac{\sum_{n_s}n_se^{-\beta n_s\epsilon_s}\sum_{R^{(s)}}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}}{\sum_{n_s}e^{-\beta n_s\epsilon_s}\sum_{R^{(s)}}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}}
+	\end{align*}
+	And we can sum over system $s$ separately
+\end{frame}
+
+
+
+\begin{frame}{Expected number of particles in state $s$}
+	\begin{align*}
+		\left<n_s\right>&=\frac{\sum_{R}n_se^{-\beta n_s\epsilon_s}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}}{\sum_{R}e^{-\beta n_s\epsilon_s}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}}\\ \\
+		&=\frac{\sum_{n_s}n_se^{-\beta n_s\epsilon_s}\sum_{R^{(s)}}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}}{\sum_{n_s}e^{-\beta n_s\epsilon_s}\sum_{R^{(s)}}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}}
+	\end{align*}
+$\sum_{R^{(s)}}\rightarrow$sum over all microstates of the subsystem excluding state $s$ (subject to the constraint that $n_s+\sum_{i,i\neq s}n_i=N$)
+\end{frame}
+
+
+\begin{frame}{Example}
+	If $N=3$, and there are 4 single particle states
+	\footnotesize
+	\begin{align*}
+		\sum_{n_s}n_s&e^{-\beta n_s\epsilon_s}\sum_{R^{(s)}}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}=\\\\
+		&0\cdot e^{-\beta\cdot 0\cdot \epsilon_2}\left(e^{-\beta\left(3\cdot\epsilon_1+0\cdot\epsilon_3+0\cdot\epsilon_4\right)}+e^{-\beta\left(0\cdot \epsilon_1+3\cdot\epsilon_3+0\cdot\epsilon_4\right)}+e^{-\beta\left(0\cdot\epsilon_1+0\cdot\epsilon_3+3\cdot\epsilon_4\right)}+\cdots\right)+\\ \\
+		&1\cdot e^{-\beta\cdot 1\cdot\epsilon_2}\left(e^{-\beta\left(2\cdot\epsilon_1+0\cdot\epsilon_3+0\cdot\epsilon_4\right)}+e^{-\beta\left(0\cdot\epsilon_1+2\cdot\epsilon_3+0\cdot\epsilon_4\right)}+e^{-\beta\left(0\cdot\epsilon_1+0\cdot\epsilon_3+2\cdot\epsilon_4\right)}+\cdots\right)+\\ \\
+		&2\cdot e^{-\beta\cdot 2\cdot\epsilon_2}\left(e^{-\beta\left(1\cdot\epsilon_1+0\cdot\epsilon_3+0\cdot\epsilon_4\right)}+e^{-\beta\left(0\cdot\epsilon_1+1\cdot\epsilon_3+0\cdot\epsilon_4\right)}+e^{-\beta\left(0\cdot\epsilon_1+0\cdot\epsilon_3+1\cdot\epsilon_4\right)}\right)+\\ \\
+		&3\cdot e^{-\beta\cdot 3\epsilon_2}\left(e^{-\beta\left(0\cdot\epsilon_1+0\cdot\epsilon_3+0\cdot\epsilon_4\right)}\right)
+	\end{align*}
+\end{frame}
+
+
+
+\begin{frame}{Expected number of particles in state $s$}
+	Note that 
+	\begin{equation*}
+		\sum_{R}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_s\epsilon_s+\cdots\right)}
+	\end{equation*}
+	Is just the partition function of the entire system.
+\end{frame}
+
+
+
+\begin{frame}{Expected number of particles in state $s$}
+	Note that 
+	\begin{equation*}
+			\sum_{R}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_s\epsilon_s+\cdots\right)}
+	\end{equation*}
+	So we interpret the quantity
+	\begin{equation*}
+		\sum_{R^{(s)}}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}
+	\end{equation*}
+As the partition function of the subsystem consisting of:
+\begin{itemize}
+	\item All system states \textit{except} $s$
+	\item All $N$ system particles \textit{except} $n_s$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Expected number of particles in state $s$}
+	And we introduce the following definition:
+	\begin{equation*}
+		Z_s(N-n_s)\equiv\sum_{R^{(s)}}e^{-\beta\left(n_1\epsilon_1+n_2\epsilon_2+\cdots+n_{s-1}\epsilon_{s-1}+\cdots\right)}
+	\end{equation*}
+\end{frame}
+
+
+
+\begin{frame}{Expected number of particles in state $s$}
+	\begin{align*}
+		\left<n_s\right>=\frac{\sum_{n_s}n_se^{-\beta n_s\epsilon_s}Z_s(N-n_s)}{\sum_{n_s}e^{-\beta n_s\epsilon_s}Z_s(N-n_s)}
+	\end{align*}
+\end{frame}
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	\begin{align*}
+		\left<n_s\right>=\frac{\sum_{n_s}n_se^{-\beta n_s\epsilon_s}Z_s(N-n_s)}{\sum_{n_s}e^{-\beta n_s\epsilon_s}Z_s(N-n_s)}
+	\end{align*}
+For \textbf{fermions} $\sum_{n_s}$ is simple:
+\begin{itemize}
+	\item $n_s$ can only be $0$ or $1$
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	\begin{align*}
+		\left<n_s\right>&=\frac{\sum_{n_s}n_se^{-\beta n_s\epsilon_s}Z_s(N-n_s)}{\sum_{n_s}e^{-\beta n_s\epsilon_s}Z_s(N-n_s)}\\\\
+		&=\frac{0\cdot e^{-\beta\cdot 0\cdot\epsilon_s}Z_s(N)+1\cdot e^{-\beta\cdot1\cdot\epsilon_s}Z_s(N-1)}{e^{-\beta\cdot0\cdot\epsilon_s}Z_s(N)+e^{-\beta\cdot1\cdot\epsilon_s}Z_s(N-1)}\\\\
+		&=\frac{e^{-\beta\epsilon_s}Z_s(N-1)}{Z_s(N)+e^{-\beta\epsilon_s}Z_s(N-1)}
+	\end{align*}
+\end{frame}
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	\begin{align*}
+		\left<n_s\right>
+		&=\frac{e^{-\beta\epsilon_s}Z_s(N-1)}{Z_s(N)+e^{-\beta\epsilon_s}Z_s(N-1)}\\\\
+		&=\frac{1}{\frac{Z_s(N)}{Z_s(N-1)}e^{-\beta\epsilon_s}+1}
+	\end{align*}
+\end{frame}
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	\begin{align*}
+		\left<n_s\right>
+		&=\frac{1}{\frac{Z_s(N)}{Z_s(N-1)}e^{\beta\epsilon_s}+1}
+	\end{align*}
+\end{frame}
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	Now we use a Taylor expansion to relate $Z_s(N)$ to $Z_s(N-1)$ (since $N>>1$)
+	\begin{align*}
+		\ln{Z_s(N-1)}\approx \ln{Z_s(N)}-1\cdot\frac{\partial}{\partial N}\ln{Z_s(N)}
+	\end{align*}
+
+\end{frame}
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	Now we use a Taylor expansion to relate $Z_s(N)$ to $Z_s(N-1)$ (since $N>>1$)
+	\begin{align*}
+		\ln{Z_s(N-1)}\approx \ln{Z_s(N)}-1\cdot\frac{\partial}{\partial N}\ln{Z_s(N)}
+	\end{align*}
+	Recall that:
+	\begin{equation*}
+		F=-kT\ln{Z_s(N)}
+	\end{equation*}
+	
+\end{frame}
+
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	Now we use a Taylor expansion to relate $Z_s(N)$ to $Z_s(N-1)$ (since $N>>1$)
+	\begin{align*}
+		\ln{Z_s(N-1)}\approx \ln{Z_s(N)}-1\cdot\frac{\partial}{\partial N}\ln{Z_s(N)}
+	\end{align*}
+	Recall that:
+	\begin{equation*}
+		F=-kT\ln{Z_s(N)}
+	\end{equation*}
+	So:
+	\begin{equation*}
+		\frac{\partial}{\partial N}\ln{Z_s(N)}=-\frac{1}{kT}\frac{\partial F}{\partial N}=-\beta\frac{\partial F}{\partial N}
+	\end{equation*}
+\end{frame}
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	Now we use a Taylor expansion to relate $Z_s(N)$ to $Z_s(N-1)$ (since $N>>1$)
+	\begin{align*}
+		\ln{Z_s(N-1)}\approx \ln{Z_s(N)}-1\cdot\frac{\partial}{\partial N}\ln{Z_s(N)}
+	\end{align*}
+	Recall that:
+	\begin{equation*}
+		F=-kT\ln{Z_s(N)}
+	\end{equation*}
+	So:
+	\begin{equation*}
+		\frac{\partial}{\partial N}\ln{Z_s(N)}=-\frac{1}{kT}\frac{\partial F}{\partial N}=-\beta\frac{\partial F}{\partial N}
+	\end{equation*}
+And: 
+\begin{equation*}
+	\frac{\partial F}{\partial N}=\mu
+\end{equation*}
+\end{frame}
+
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	So:
+	\begin{equation*}
+		\frac{\partial}{\partial N}\ln{Z_s(N)}=-\beta \mu
+	\end{equation*}
+And:
+	\begin{align*}
+		\ln{Z_s(N-1)}&\approx \ln{Z_s(N)}-1\cdot\frac{\partial}{\partial N}\ln{Z_s(N)}\\\\
+		&=  \ln{Z_s(N)}+\mu\beta
+	\end{align*}
+\end{frame}
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	\begin{align*}
+		\ln{Z_s(N-1)}&\approx \ln{Z_s(N)}+\mu\beta\\\\
+	\end{align*}
+So:
+	\begin{align*}
+		Z_s(N-1)&\approx Z_s(N)e^{\mu\beta}
+	\end{align*}
+And:
+	\begin{align*}
+		\frac{Z_s(N)}{Z_s(N-1)}\approx e^{-\mu\beta}
+	\end{align*}
+\end{frame}
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	\begin{align*}
+		\frac{Z_s(N)}{Z_s(N-1)}\approx e^{-\mu\beta}
+	\end{align*}
+And:
+	\begin{align*}
+	\left<n_s\right>
+	&=\frac{1}{\frac{Z_s(N)}{Z_s(N-1)}e^{\beta\epsilon_s}+1}
+\end{align*}
+So:
+\begin{align*}
+	\left<n_s\right>=\frac{1}{e^{\beta\left(\epsilon_s-\mu\right)}+1}
+\end{align*}
+\end{frame}
+
+
+
+\begin{frame}{$\left<n_s\right>$ for fermions}
+	\begin{equation*}
+		\boxed{	\left<n_s\right>=\frac{1}{e^{\beta\left(\epsilon_s-\mu\right)}+1}}
+	\end{equation*}
+
+\end{frame}
+
+
+
+\begin{frame}{$\left<n_s\right>$ for \textit{bosons}}
+	\begin{align*}
+	\left<n_s\right>=\frac{\sum_{n_s}n_se^{-\beta n_s\epsilon_s}Z_s(N-n_s)}{\sum_{n_s}e^{-\beta n_s\epsilon_s}Z_s(N-n_s)}
+\end{align*}
+\end{frame}
+
+\begin{frame}{$\left<n_s\right>$ for \textit{bosons}}
+	\begin{align*}
+		\left<n_s\right>=\frac{\sum_{n_s}n_se^{-\beta n_s\epsilon_s}Z_s(N-n_s)}{\sum_{n_s}e^{-\beta n_s\epsilon_s}Z_s(N-n_s)}
+	\end{align*}
+	For \textbf{bosons}, $\sum_{n_s}$ ranges from $n_s=0$ up to $n_s=N$
+\end{frame}
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for \textit{bosons}}
+	\tiny
+	\begin{align*}
+		\left<n_s\right>&=\frac{\sum_{n_s}n_se^{-\beta n_s\epsilon_s}Z_s(N-n_s)}{\sum_{n_s}e^{-\beta n_s\epsilon_s}Z_s(N-n_s)}\\\\
+		&=\frac{0\cdot e^{\beta\cdot 0\cdot \epsilon_s}\cdot Z_s(N)+1\cdot e^{-\beta\cdot\epsilon_s}\cdot Z_s(N-1)+2\cdot e^{-\beta\cdot2\cdot\epsilon_s}\cdot Z_s(N-2)+3\cdot e^{-\beta\cdot3\cdot\epsilon_s}\cdot Z_s(N-3)+\cdots}{ e^{\beta\cdot 0\cdot \epsilon_s}\cdot Z_s(N)+ e^{-\beta\cdot\epsilon_s}\cdot Z_s(N-1)+ e^{-\beta\cdot2\cdot\epsilon_s}\cdot Z_s(N-2)+ e^{-\beta\cdot3\cdot\epsilon_s}\cdot Z_s(N-3)+\cdots}
+	\end{align*}
+\end{frame}
+
+
+
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	Again using a Taylor expansion:
+	\begin{align*}
+		\ln{Z_s(N-\Delta N)}\approx \ln{Z_s(N)}-\Delta N\cdot\frac{\partial}{\partial N}\ln{Z_s(N)}
+	\end{align*}
+	
+\end{frame}
+
+
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	Again using a Taylor expansion:
+	\begin{align*}
+		\ln{Z_s(N-\Delta N)}\approx \ln{Z_s(N)}-\Delta N\cdot\frac{\partial}{\partial N}\ln{Z_s(N)}
+	\end{align*}
+	And recalling that:
+	\begin{equation*}
+		\frac{\partial}{\partial N}\ln{Z_s(N)}=\beta\frac{\partial F}{\partial N}=-\beta \mu
+	\end{equation*}
+\end{frame}
+
+
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	Again using a Taylor expansion:
+	\begin{align*}
+		\ln{Z_s(N-\Delta N)}\approx \ln{Z_s(N)}-\Delta N\cdot\frac{\partial}{\partial N}\ln{Z_s(N)}
+	\end{align*}
+	And recalling that:
+	\begin{equation*}
+		\frac{\partial}{\partial N}\ln{Z_s(N)}=\beta\frac{\partial F}{\partial N}=-\beta \mu
+	\end{equation*}
+
+We find:
+\begin{equation*}
+	\frac{Z_s(N)}{Z_s(N-\Delta N)}\approx e^{-\Delta N\mu \beta}
+\end{equation*}
+\end{frame}
+
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	Using this fact: we can rewrite $\left<n_s\right>$:
+	\tiny
+\begin{align*}
+	\left<n_s\right>&=\frac{0\cdot e^{\beta\cdot 0\cdot \epsilon_s}\cdot Z_s(N)+1\cdot e^{-\beta\cdot\epsilon_s}\cdot Z_s(N-1)+2\cdot e^{-\beta\cdot2\cdot\epsilon_s}\cdot Z_s(N-2)+3\cdot e^{-\beta\cdot3\cdot\epsilon_s}\cdot Z_s(N-3)+\cdots}{ e^{\beta\cdot 0\cdot \epsilon_s}\cdot Z_s(N)+ e^{-\beta\cdot\epsilon_s}\cdot Z_s(N-1)+ e^{-\beta\cdot2\cdot\epsilon_s}\cdot Z_s(N-2)+ e^{-\beta\cdot3\cdot\epsilon_s}\cdot Z_s(N-3)+\cdots}\\ \\
+	&=\frac{Z_s(N)\left(0+\frac{Z_s(N-1)}{Z_s(N)}e^{-\beta \epsilon_s}+2\frac{Z_s(N-2)}{Z_s(N)}e^{-2\beta\epsilon_s}+\cdots\right)}{Z_s(N)\left(0+\frac{Z_s(N-1)}{Z_s(N)}e^{-\beta \epsilon_s}+\frac{Z_s(N-2)}{Z_s(N)}e^{-2\beta\epsilon_s}+\cdots\right)}
+\end{align*}
+	
+\end{frame}
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	\begin{align*}
+		\left<n_s\right>
+		&=\frac{Z_s(N)\left(0+\frac{Z_s(N-1)}{Z_s(N)}e^{-\beta \epsilon_s}+2\frac{Z_s(N-2)}{Z_s(N)}e^{-2\beta\epsilon_s}+\cdots\right)}{Z_s(N)\left(0+\frac{Z_s(N-1)}{Z_s(N)}e^{-\beta \epsilon_s}+\frac{Z_s(N-2)}{Z_s(N)}e^{-2\beta\epsilon_s}+\cdots\right)}
+	\end{align*}
+
+And:
+\begin{align*}
+	\frac{Z_s(N-\Delta N)}{Z_s(N)}\approx e^{\Delta N\beta \mu}
+\end{align*}
+	
+\end{frame}
+
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	So:
+	\begin{align*}
+		\left<n_s\right>
+		&=\frac{Z_s(N)\left(0+e^{\beta \mu}e^{-\beta \epsilon_s}+2e^{2\beta\mu}e^{-2\beta\epsilon_s}+\cdots\right)}{Z_s(N)\left(0+e^{\beta\mu}e^{-\beta \epsilon_s}+e^{2\beta\mu}e^{-2\beta\epsilon_s}+\cdots\right)}\\\\
+		&=\frac{e^{-\beta\left(\epsilon_s-\mu\right)}+2e^{-2\beta\left(\epsilon_s-\mu\right)}+3e^{-3\beta\left(\epsilon_s-\mu\right)}+\cdots}{1+e^{-\beta\left(\epsilon_s-\mu\right)}+e^{-2\beta\left(\epsilon_s-\mu\right)}+e^{-3\beta\left(\epsilon_s-\mu\right)}+\cdots}\\\\
+		&=\frac{\sum_{n_s}n_se^{-\beta n_s\left(\epsilon_s-\mu\right)}}{\sum_{n_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}}
+	\end{align*}
+	
+	
+\end{frame}
+
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	So:
+	\begin{align*}
+		\left<n_s\right>
+		&=\frac{\sum_{n_s}n_se^{-\beta n_s\left(\epsilon_s-\mu\right)}}{\sum_{n_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}}
+	\end{align*}
+	
+	
+\end{frame}
+
+
+
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	So:
+	\begin{align*}
+		\left<n_s\right>
+		&=\frac{\sum_{n_s}n_se^{-\beta n_s\left(\epsilon_s-\mu\right)}}{\sum_{n_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}}
+	\end{align*}
+	Which we write as:
+	\begin{align*}
+		\left<n_s\right>&=\frac{\sum_{n_s}-\frac{1}{\beta}\frac{\partial}{\partial \epsilon_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}}{\sum_{n_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}}\\\\
+		&=\frac{-\frac{1}{\beta}\frac{\partial}{\partial \epsilon_s}\sum_{n_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}}{\sum_{n_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}}\\\\
+		&=-\frac{1}{\beta}\frac{\partial}{\partial \epsilon_s}\ln{\left(\sum_{n_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}\right)}
+	\end{align*}
+	
+\end{frame}
+
+
+
+
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	\begin{align*}
+		\left<n_s\right>&=-\frac{1}{\beta}\frac{\partial}{\partial \epsilon_s}\ln{\left(\sum_{n_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}\right)}
+	\end{align*}
+	$\sum_{n_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}$ is a \textbf{geometric series}:
+	\begin{equation*}
+		S_N=\sum_{n_s}^{N}r^{n_s}
+	\end{equation*}
+Where $r=e^{-\beta\left(\epsilon_s-\mu\right)}$
+\end{frame}
+
+
+
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	We showed how to solve this series in class:
+	\begin{align*}
+		S_N=\sum_{n_s}^{N}r^{n_s}=\frac{1-r^{N+1}}{1-r}
+	\end{align*}
+
+If $|r|$=$\left|e^{-\beta\left(\epsilon_s-\mu\right)}\right|<1$, and $N>>1$:
+\begin{equation*}
+\sum_{n_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}=\frac{1}{1-e^{-\beta\left(\epsilon_s-\mu\right)}}
+\end{equation*}
+\end{frame}
+
+	
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	Finally:
+	\begin{align*}
+		\left<n_s\right>&=-\frac{1}{\beta}\frac{\partial}{\partial \epsilon_s}\ln{\left(\sum_{n_s}e^{-\beta n_s\left(\epsilon_s-\mu\right)}\right)}\\\\
+		&=-\frac{1}{\beta}\frac{\partial}{\partial \epsilon_s}\ln{\left(\frac{1}{1-e^{-\beta\left(\epsilon_s-\mu\right)}}\right)}\\\\
+		&=\frac{1}{e^{\beta\left(\epsilon_s-\mu\right)}-1}
+	\end{align*}
+\end{frame}
+
+
+
+\begin{frame}{$\left<n_s\right>$ for bosons}
+	\begin{equation*}
+		\boxed{	\left<n_s\right>=\frac{1}{e^{\beta\left(\epsilon_s-\mu\right)}-1}}
+	\end{equation*}
+\end{frame}
+
+
+
+\begin{frame}{The quantum \textit{distribution functions}}
+	\textbf{Fermions} (\textit{Fermi-Dirac statistics})
+	\begin{equation*}
+		\left<n_s\right>=\frac{1}{e^{\beta\left(\epsilon_s-\mu\right)}+1}
+	\end{equation*}
+
+
+	\textbf{Bosons} (\textit{Bose-Einstein statistics})
+\begin{equation*}
+	\left<n_s\right>=\frac{1}{e^{\beta\left(\epsilon_s-\mu\right)}-1}
+\end{equation*}
+\end{frame}
+\end{document}
